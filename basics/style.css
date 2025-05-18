@@ -1,25 +1,21 @@
-*{
-    text-decoration: none;
-}
-
 body{
     background-color:rgb(94, 2, 94);
     color: rgb(0, 0, 0);
     margin: 0;
 }
+
 .navbar{
     background-color: rgb(128, 81, 172);
     padding-left: 15px;
-    padding-right: 200px;
+    padding-right: 15px;
     position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
 .navdiv{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 .links li{
@@ -28,12 +24,25 @@ body{
     list-style-type: none;
     display: inline-block;
 }
-
+.links button{
+    background-color: aqua;
+}
 li a{
     color: black;
     padding: 5px;
     padding-left: 25px;
     padding-right: 25px;
+    text-decoration: none;
+
+}
+
+.logo {
+  font-size: 15px;
+  transition: transform 0.2s;   /* smooth enlarge/shrink */
+}
+
+.logo:hover {
+  transform: scale(1.1);        /* looks ~10 % bigger but layout stays put */
 }
 
 p{
@@ -48,6 +57,5 @@ p{
 
 #right ul{
     float: right;
-
 }
 

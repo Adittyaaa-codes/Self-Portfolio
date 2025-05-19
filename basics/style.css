@@ -1,11 +1,11 @@
 body{
-    background-color:rgb(94, 2, 94);
+    background-color:rgb(40, 40, 57);
     color: rgb(0, 0, 0);
     margin: 0;
 }
 
 .navbar{
-    background-color: rgb(128, 81, 172);
+    background-color: rgb(76, 52, 97);
     padding-left: 15px;
     padding-right: 15px;
     position: sticky;
@@ -37,7 +37,7 @@ body{
     }
 }
 li a{
-    color: black;
+    color: rgb(245, 245, 245);
     padding: 5px;
     padding-left: 25px;
     padding-right: 25px;
@@ -46,6 +46,8 @@ li a{
 
 .logo {
   font-size: 25px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(229, 233, 220);
   transition: transform 0.2s;  
   padding: 0%; 
   line-height: 10px;
@@ -57,25 +59,74 @@ li a{
 
 .first{
     height: 90vh;
-    border: 2px solid white;
+    /* border: 2px solid white; */
+    padding-left: 15vw;
+    padding-right: 20vw;
     display: flex;
     align-items: center;
     justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .pp{
     height: 20vw;
     border-radius: 50%;
     object-fit: cover;     
-    position: absolute;  
     left: 70vw;          
     top: 30vh;
     width: 300px;
-    display: flex;
     align-items: end;
     transition: transform 0.2s;
 
     &:hover{
         transform: scale(1.1);
+        box-shadow: 50%;
     }
+}
+
+.intro{
+    display: inline-block;
+    color:azure;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#hello{
+    font-size: 40px;
+
+}
+
+#self{
+    font-size: 55px;
+    font-family: monospace;
+    display: inline-block;
+    color: rgb(235, 214, 209);
+}
+
+#name{
+    font-size: 55px;
+    letter-spacing: 1px;
+    font-family: monospace;
+    color: rgb(232, 130, 28);
+    font-weight: bold;
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+        typing 2s,
+        cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor {
+    50% { border-color: transparent }
+}
+
+@keyframes typing {
+    from { width: 0 }
+}
+
+
+#prof{
+    font-size: 30px;
 }

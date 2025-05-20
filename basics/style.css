@@ -8,8 +8,10 @@ body{
     background-color: rgb(76, 52, 97);
     padding-left: 15px;
     padding-right: 15px;
-    position: sticky;
+    /* position: fixed; */
     overflow: hidden;
+    flex-wrap: wrap;
+    width: 98vw;
 }
 
 .navdiv{
@@ -34,6 +36,10 @@ body{
 
     &:hover{
         background-color: rgb(108, 0, 176);
+    }
+
+    &:active{
+        background-color: rgb(94, 0, 153);
     }
 }
 li a{
@@ -60,7 +66,7 @@ li a{
 .first{
     height: 90vh;
     /* border: 2px solid white; */
-    padding-left: 15vw;
+    /* padding-left: 15vw; */
     padding-right: 20vw;
     display: flex;
     align-items: center;
@@ -89,6 +95,7 @@ li a{
     display: inline-block;
     color:azure;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-indent: 200px;
 }
 
 #hello{
@@ -130,3 +137,40 @@ li a{
 #prof{
     font-size: 30px;
 }
+
+.second{
+    height: 100vh;
+}
+
+.content a{
+    font-size: 2em;
+    padding: 5px;
+}
+
+
+.content{
+    display: none;
+    background-color: rgb(30, 22, 36);
+    border-radius: 10px;
+    position: absolute;
+    top: 70px;
+    right: 40px;
+    max-width: 10vw;
+    min-height: 10vw;
+}
+
+.content a:hover{
+    background-color: rgb(54, 35, 60);
+    border: 2px solid white;
+    color: azure;
+}
+
+.container:hover .content{
+    display:block;
+}
+
+.container:active .content{
+    display:block;
+}
+
+

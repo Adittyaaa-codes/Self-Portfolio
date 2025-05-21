@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: rgb(40, 40, 57);
     color: rgb(0, 0, 0);
@@ -9,12 +13,22 @@ body {
     min-height: 100vh;
 }
 
-i,svg {
-  width: 24px;       
-  height: 24px;      
-  font-size: 24px;   
-  display: inline-block;
-  vertical-align: middle;
+.bi::before, [class*=" bi-"]::before, [class^=bi-]::before {
+    display: inline;
+    flex-direction: row;
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+}
+
+.icons{
+    text-decoration: none;
 }
 
 .navbar {
@@ -345,4 +359,21 @@ body:has(.about-overlay:target) {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+}
+
+.skillIcons i{
+    display: flex;
+    padding: 20px;
+    padding-left: 60px;
+}
+
+.skillIcons{
+    /* border: solid 2px white; */
+    height: 6em;
+}
+
+.footer{
+    height: 20vw;
+    /* border: solid 2px white; */
+    background-color: black;
 }

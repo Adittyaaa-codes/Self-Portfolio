@@ -1,14 +1,23 @@
-body{
-    background-color:rgb(40, 40, 57);
+body {
+    background-color: rgb(40, 40, 57);
     color: rgb(0, 0, 0);
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow-x: hidden; 
+    overflow-x: hidden;
+    transition: filter 0.4s ease;
+    min-height: 100vh;
 }
 
+i,svg {
+  width: 24px;       
+  height: 24px;      
+  font-size: 24px;   
+  display: inline-block;
+  vertical-align: middle;
+}
 
-.navbar{
+.navbar {
     background-color: rgb(76, 52, 97);
     padding-left: 15px;
     padding-right: 15px;
@@ -18,17 +27,18 @@ body{
     width: 98vw;
 }
 
-.navdiv{
+.navdiv {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.links li{
+.links li {
     list-style-type: none;
     display: inline-block;
 }
-.links button{
+
+.links button {
     font-size: 25px;
     font-weight: bold;
     background-color: transparent;
@@ -37,15 +47,16 @@ body{
     padding: 7px;
     border-radius: 7px;
 
-    &:hover{
+    &:hover {
         background-color: rgb(108, 0, 176);
     }
 
-    &:active{
+    &:active {
         background-color: rgb(94, 0, 153);
     }
 }
-li a{
+
+li a {
     color: rgb(245, 245, 245);
     padding: 5px;
     padding-left: 25px;
@@ -54,19 +65,19 @@ li a{
 }
 
 .logo {
-  font-size: 30px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: rgb(229, 233, 220);
-  transition: transform 0.2s;  
-  padding: 0%; 
-  line-height: 10px;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(229, 233, 220);
+    transition: transform 0.2s;
+    padding: 0%;
+    line-height: 10px;
 }
 
 .logo:hover {
-  transform: scale(1.1);        
+    transform: scale(1.1);
 }
 
-.first{
+.first {
     height: 90vh;
     /* border: 2px solid white; */
     /* padding-left: 15vw; */
@@ -79,42 +90,42 @@ li a{
     /* position: relative; */
 }
 
-.pp{
-    width: 300px;         
-    height: 300px; 
+.pp {
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
-    object-fit: cover;     
-    left: 70vw;          
+    object-fit: cover;
+    left: 70vw;
     top: 30vh;
     align-items: end;
     transition: transform 0.2s;
 
-    &:hover{
+    &:hover {
         transform: scale(1.1);
         box-shadow: 50%;
     }
 }
 
-.intro{
+.intro {
     display: inline-block;
-    color:azure;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: azure;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-indent: 200px;
 }
 
-#hello{
+#hello {
     font-size: 40px;
 
 }
 
-#self{
+#self {
     font-size: 55px;
     font-family: monospace;
     display: inline-block;
     color: rgb(235, 214, 209);
 }
 
-#name{
+#name {
     font-size: 55px;
     letter-spacing: 1px;
     font-family: monospace;
@@ -126,21 +137,21 @@ li a{
 }
 
 
-#prof{
+#prof {
     font-size: 30px;
 }
 
-.second{
+.second {
     height: 100vh;
 }
 
-.content a{
+.content a {
     font-size: 2em;
     padding: 5px;
 }
 
 
-.content{
+.content {
     display: none;
     background-color: rgb(30, 22, 36);
     border-radius: 10px;
@@ -151,31 +162,31 @@ li a{
     min-height: 10vw;
 }
 
-.content a:hover{
+.content a:hover {
     background-color: rgb(54, 35, 60);
     border: 2px solid white;
     color: azure;
 }
 
-.container:hover .content{
-    display:block;
+.container:hover .content {
+    display: block;
 }
 
-.container:active .content{
-    display:block;
+.container:active .content {
+    display: block;
 }
 
 .skills {
     width: 100%;
     padding: 20px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 .skills h2 {
     margin: 0;
     margin-top: 50px;
     text-align: center;
-    color:azure;
+    color: azure;
     font-size: xx-large;
 }
 
@@ -183,14 +194,14 @@ li a{
 .project {
     width: 100%;
     padding: 20px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 .project h2 {
     margin: 0;
     margin-top: 50px;
     text-align: center;
-    color:azure;
+    color: azure;
     font-size: xx-large;
 }
 
@@ -198,18 +209,18 @@ li a{
 .ex {
     width: 100%;
     padding: 20px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 .ex h2 {
     margin: 0;
     margin-top: 50px;
     text-align: center;
-    color:azure;
+    color: azure;
     font-size: xx-large;
 }
 
-.skdisplay{
+.skdisplay {
     height: 40vw;
     margin: 10px;
     /* border: 2px solid white; */
@@ -217,7 +228,30 @@ li a{
     background-color: rgb(29, 29, 35);
 }
 
-.prdisplay{
+.skdisplay h5{
+    text-align: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    padding: 20px;
+    color: rgb(252, 223, 223);
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  
+  .yellow {
+    background-color: #FFD700; 
+  }
+  
+  .green {
+    background-color: #32CD32; 
+  }
+
+.prdisplay {
     height: 40vw;
     margin: 10px;
     /* border: 2px solid white; */
@@ -225,7 +259,7 @@ li a{
     background-color: rgb(29, 29, 35);
 }
 
-.exdisplay{
+.exdisplay {
     height: 40vw;
     margin: 10px;
     /* border: 2px solid white; */
@@ -233,8 +267,82 @@ li a{
     background-color: rgb(29, 29, 35);
 }
 
-.bi{
+.bi {
     font-size: xx-large;
     color: black;
-    margin-left: -x
+    padding-left: 15px;
+    padding-right: 15px ;
+}
+
+body:has(.about-overlay:target) {
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+}
+
+
+.about-btn {
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+.about-btn:hover~#page-content {
+    filter: blur(5px);
+}
+
+.about-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    z-index: 5;
+}
+
+.about-content {
+    color: aliceblue;
+    background: transparent;
+    padding: 2rem;
+    border-radius: 10px;
+    min-width: 600px;
+    border: none;
+    width: 90%;
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.about-overlay:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.about-overlay:target .about-content {
+    transform: scale(1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.2);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
 }

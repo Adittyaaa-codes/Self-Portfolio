@@ -54,7 +54,7 @@ li a{
 }
 
 .logo {
-  font-size: 25px;
+  font-size: 30px;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: rgb(229, 233, 220);
   transition: transform 0.2s;  
@@ -68,7 +68,7 @@ li a{
 
 .first{
     height: 90vh;
-    border: 2px solid white;
+    /* border: 2px solid white; */
     /* padding-left: 15vw; */
     padding-right: 20vw;
     display: flex;
@@ -120,21 +120,9 @@ li a{
     font-family: monospace;
     color: rgb(232, 130, 28);
     font-weight: bold;
-    border-right: 5px solid;
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
-    animation: 
-        typing 2s,
-        cursor .4s step-end infinite alternate;
-}
-
-@keyframes cursor {
-    50% { border-color: transparent }
-}
-
-@keyframes typing {
-    from { width: 0 }
 }
 
 
@@ -191,10 +179,56 @@ li a{
     font-size: xx-large;
 }
 
+
+.project {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+.project h2 {
+    margin: 0;
+    margin-top: 50px;
+    text-align: center;
+    color:azure;
+    font-size: xx-large;
+}
+
+
+.ex {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+.ex h2 {
+    margin: 0;
+    margin-top: 50px;
+    text-align: center;
+    color:azure;
+    font-size: xx-large;
+}
+
 .skdisplay{
     height: 40vw;
     margin: 10px;
-    border: 2px solid white;
+    /* border: 2px solid white; */
+    border-radius: 25px;
+    background-color: rgb(29, 29, 35);
+}
+
+.prdisplay{
+    height: 40vw;
+    margin: 10px;
+    /* border: 2px solid white; */
+    border-radius: 25px;
+    background-color: rgb(29, 29, 35);
+}
+
+.exdisplay{
+    height: 40vw;
+    margin: 10px;
+    /* border: 2px solid white; */
     border-radius: 25px;
     background-color: rgb(29, 29, 35);
 }

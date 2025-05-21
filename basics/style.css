@@ -2,7 +2,11 @@ body{
     background-color:rgb(40, 40, 57);
     color: rgb(0, 0, 0);
     margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; 
 }
+
 
 .navbar{
     background-color: rgb(76, 52, 97);
@@ -18,7 +22,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
 }
 
 .links li{
@@ -65,7 +68,7 @@ li a{
 
 .first{
     height: 90vh;
-    /* border: 2px solid white; */
+    border: 2px solid white;
     /* padding-left: 15vw; */
     padding-right: 20vw;
     display: flex;
@@ -73,15 +76,16 @@ li a{
     justify-content: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    /* position: relative; */
 }
 
 .pp{
-    height: 20vw;
+    width: 300px;         
+    height: 300px; 
     border-radius: 50%;
     object-fit: cover;     
     left: 70vw;          
     top: 30vh;
-    width: 300px;
     align-items: end;
     transition: transform 0.2s;
 
@@ -173,4 +177,30 @@ li a{
     display:block;
 }
 
+.skills {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box; 
+}
 
+.skills h2 {
+    margin: 0;
+    margin-top: 50px;
+    text-align: center;
+    color:azure;
+    font-size: xx-large;
+}
+
+.skdisplay{
+    height: 40vw;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 25px;
+    background-color: rgb(29, 29, 35);
+}
+
+.bi{
+    font-size: xx-large;
+    color: black;
+    margin-left: -x
+}

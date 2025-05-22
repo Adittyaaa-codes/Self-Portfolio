@@ -235,7 +235,7 @@ li a {
 }
 
 .skdisplay {
-    height: 40vw;
+    height: 42vw;
     margin: 10px;
     /* border: 2px solid white; */
     border-radius: 25px;
@@ -266,12 +266,56 @@ li a {
   }
 
 .prdisplay {
-    height: 40vw;
+    height: 500px;
     margin: 10px;
-    /* border: 2px solid white; */
     border-radius: 25px;
     background-color: rgb(29, 29, 35);
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    padding: 25px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    align-items: stretch; 
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #1d1d23;
 }
+
+.projectcard {
+    /* border: solid 2px rgb(201, 9, 9); */
+    min-height: 450px;
+    min-width: 350px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center;
+    justify-content: space-between;
+    flex: 0 0 auto;              
+    background-color: #a2a6e2b4;
+    border-radius: 35px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    scroll-snap-align: start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;   
+}
+
+.projectcard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.projectcard img{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    border: solid 5px #767de3b4;
+}
+
 
 .exdisplay {
     height: 40vw;
@@ -279,6 +323,46 @@ li a {
     /* border: 2px solid white; */
     border-radius: 25px;
     background-color: rgb(29, 29, 35);
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.exdisplay a{
+    text-decoration: none;
+    color: azure;
+}
+
+.exdisplay button{
+    font-size: 1.5em;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: rgb(145, 71, 214);
+    border:none;
+
+    &:hover{
+        background-color: rgb(96, 46, 143);
+    }
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column; /* Places elements vertically */
+    align-items: center;    /* Centers logo and text horizontally */
+    text-align: center;
+}
+
+.card-logo {
+    width: 100px;
+    height: 100px;
+}
+
+.card-text {
+    font-family: monospace;
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1.5;
 }
 
 .bi {
@@ -366,7 +450,8 @@ body:has(.about-overlay:target) {
     padding: 3px;
     border-radius: 15px;
     margin: 15px;
-    background-color: 	#1e1e24;
+    background-color: 	#393939;
+    /* background-color: transparent; */
     transition: transform 0.2s;
 
     &:hover {
@@ -384,8 +469,18 @@ body:has(.about-overlay:target) {
     text-align: center;
 }
 
+.projectcard{
+    border: solid 2px white;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .footer{
-    height: 20vw;
+    height: 200px;
+    padding: 20px;
     /* border: solid 2px white; */
     background-color: black;
 }

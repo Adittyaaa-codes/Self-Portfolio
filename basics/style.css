@@ -361,15 +361,27 @@ body:has(.about-overlay:target) {
     border-radius: 50%;
 }
 
-.skillIcons i{
+.skillIcons img{
     display: flex;
-    padding: 20px;
-    padding-left: 60px;
+    padding: 3px;
+    border-radius: 15px;
+    margin: 15px;
+    background-color: 	#1e1e24;
+    transition: transform 0.2s;
+
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 50%;
+    }
 }
 
 .skillIcons{
+    max-width: 90vw;
+    display: flex;
+    margin:auto;
     /* border: solid 2px white; */
-    height: 6em;
+    height: 6.5em;
+    text-align: center;
 }
 
 .footer{

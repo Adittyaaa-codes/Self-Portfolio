@@ -1,4 +1,10 @@
-html{
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+html {
     scroll-behavior: smooth;
 }
 
@@ -13,7 +19,9 @@ body {
     min-height: 100vh;
 }
 
-.bi::before, [class*=" bi-"]::before, [class^=bi-]::before {
+.bi::before,
+[class*=" bi-"]::before,
+[class^=bi-]::before {
     display: inline;
     flex-direction: row;
     font-family: bootstrap-icons !important;
@@ -27,7 +35,7 @@ body {
     overflow: hidden;
 }
 
-.icons{
+.icons {
     text-decoration: none;
 }
 
@@ -38,13 +46,22 @@ body {
     /* position: fixed; */
     overflow: hidden;
     flex-wrap: wrap;
-    width: 98vw;
+    width: 100vw;
+    box-sizing: border-box;
 }
 
 .navdiv {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
 }
 
 .links li {
@@ -109,8 +126,8 @@ li a {
     height: 300px;
     border-radius: 50%;
     object-fit: cover;
-    left: 70vw;
-    top: 30vh;
+    /* left: 200px;
+    top: 200px; */
     align-items: end;
     transition: transform 0.2s;
 
@@ -235,14 +252,16 @@ li a {
 }
 
 .skdisplay {
-    height: 42vw;
+    height: 650px;
+    height: auto !important;
     margin: 10px;
     /* border: 2px solid white; */
-    border-radius: 25px;
+    box-sizing: border-box;
+    /* border-radius: 25px; */
     background-color: rgb(29, 29, 35);
 }
 
-.skdisplay h5{
+.skdisplay h5 {
     text-align: center;
     gap: 0.5rem;
     font-size: 1.2rem;
@@ -255,15 +274,15 @@ li a {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-  }
-  
-  .yellow {
-    background-color: #FFD700; 
-  }
-  
-  .green {
-    background-color: #32CD32; 
-  }
+}
+
+.yellow {
+    background-color: #FFD700;
+}
+
+.green {
+    background-color: #32CD32;
+}
 
 .prdisplay {
     height: 500px;
@@ -274,9 +293,9 @@ li a {
     flex-direction: row;
     gap: 25px;
     padding: 25px;
-    overflow-x: auto;
+    overflow-x:hidden;
     overflow-y: hidden;
-    align-items: stretch; 
+    align-items: stretch;
     scroll-snap-type: x mandatory;
     scrollbar-width: thin;
     scrollbar-color: #888 #1d1d23;
@@ -288,18 +307,18 @@ li a {
     min-width: 350px;
     margin: 30px;
     display: flex;
-    flex-direction: column; 
-    justify-content: flex-start; 
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     justify-content: space-between;
-    flex: 0 0 auto;              
+    flex: 0 0 auto;
     background-color: #a2a6e2b4;
     border-radius: 35px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    scroll-snap-align: start;
+    /* scroll-snap-align: start; */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-sizing: border-box;   
+    box-sizing: border-box;
 }
 
 .projectcard:hover {
@@ -307,7 +326,7 @@ li a {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.projectcard img{
+.projectcard img {
     width: 300px;
     display: flex;
     align-items: center;
@@ -318,38 +337,40 @@ li a {
 
 
 .exdisplay {
-    height: 40vw;
+    height: 650px;
     margin: 10px;
     /* border: 2px solid white; */
     border-radius: 25px;
     background-color: rgb(29, 29, 35);
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     flex: 0 0 auto;
 }
 
-.exdisplay a{
+.exdisplay a {
     text-decoration: none;
     color: azure;
 }
 
-.exdisplay button{
+.exdisplay button {
     font-size: 1.5em;
     padding: 15px;
     border-radius: 15px;
     background-color: rgb(145, 71, 214);
-    border:none;
+    border: none;
 
-    &:hover{
+    &:hover {
         background-color: rgb(96, 46, 143);
     }
 }
 
 .card-content {
     display: flex;
-    flex-direction: column; /* Places elements vertically */
-    align-items: center;    /* Centers logo and text horizontally */
+    flex-direction: column;
+    /* Places elements vertically */
+    align-items: center;
+    /* Centers logo and text horizontally */
     text-align: center;
 }
 
@@ -369,14 +390,14 @@ li a {
     font-size: xx-large;
     color: black;
     padding-left: 15px;
-    padding-right: 15px ;
+    padding-right: 15px;
 }
 
 body:has(.about-overlay:target) {
-  overflow: hidden;
-  height: 100vh;
-  position: fixed;
-  width: 100%;
+    overflow: hidden;
+    height: 100vh;
+    position: fixed;
+    width: 100%;
 }
 
 
@@ -445,12 +466,14 @@ body:has(.about-overlay:target) {
     border-radius: 50%;
 }
 
-.skillIcons img{
+.skillIcons img {
+    width: clamp(40px, 10vw, 80px);
+    height: auto;
     display: flex;
     padding: 3px;
     border-radius: 15px;
     margin: 15px;
-    background-color: 	#393939;
+    background-color: #393939;
     /* background-color: transparent; */
     transition: transform 0.2s;
 
@@ -460,27 +483,181 @@ body:has(.about-overlay:target) {
     }
 }
 
-.skillIcons{
+.skillIcons {
     max-width: 90vw;
     display: flex;
-    margin:auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: auto;
     /* border: solid 2px white; */
     height: 6.5em;
     text-align: center;
 }
 
-.projectcard{
+.projectcard {
     border: solid 2px white;
     height: 200px;
     width: 200px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: clamp(280px, 90%, 350px);
+    flex: 1 1 auto;
 }
 
-.footer{
+.footer {
+    display: flex;
+    justify-content: space-between;
     height: 200px;
     padding: 20px;
+    width: 100vw;
+    box-sizing: border-box;
     /* border: solid 2px white; */
     background-color: black;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+
+.div1 {
+    grid-area: 1 / 1 / 3 / 4;
+}
+
+.div2 {
+    grid-area: 1 / 4 / 3 / 7;
+}
+
+.div3 {
+    grid-area: 3 / 1 / 4 / 7;
+}
+
+.navbar,
+.footer {
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+.footer .parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.skdisplay,
+.exdisplay,
+.footer {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    padding: 15px;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.skillIcons img,
+.projectcard img,
+.card-logo {
+    max-width: 100%;
+    height: auto;
+}
+
+
+@media screen and (max-width: 930px) {
+    .hamburger {
+        display: block;
+    }
+
+    .links {
+        display: none;
+        flex-direction: column;
+        background-color: rgb(76, 52, 97);
+        position: absolute;
+        top: 60px;
+        right: 15px;
+        width: 200px;
+        border-radius: 10px;
+        z-index: 1000;
+    }
+
+    .links.active {
+        display: flex;
+    }
+
+    .links li {
+        display: block;
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .first {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .profile-pic-wrapper {
+        order: -1;
+    }
+
+    .intro {
+        text-indent: 0;
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .pp {
+        width: 250px;
+        height: 250px;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+  .skdisplay {
+    height: auto;
+    padding: 10px;
+  }
+
+  .skillIcons img {
+    width: clamp(40px, 12vw, 70px);
+    height: auto;
+  }
+
+  .prdisplay {
+    flex-wrap: wrap;
+    height: auto;
+    overflow: hidden;
+    padding: 10px;
+  }
+
+  .projectcard {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .footer .parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 }

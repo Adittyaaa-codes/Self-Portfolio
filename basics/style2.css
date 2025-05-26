@@ -1,7 +1,15 @@
 * {
     box-sizing: border-box;
     max-width: 100%;
-    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;  
 }
 
 html {
@@ -46,7 +54,7 @@ body {
     /* position: fixed; */
     overflow: hidden;
     flex-wrap: wrap;
-    width: 100vw;
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -253,11 +261,10 @@ li a {
 
 .skdisplay {
     height: 650px;
-    height: auto !important;
     margin: 10px;
     /* border: 2px solid white; */
     box-sizing: border-box;
-    /* border-radius: 25px; */
+    border-radius: 25px;
     background-color: rgb(29, 29, 35);
 }
 
@@ -287,13 +294,15 @@ li a {
 .prdisplay {
     height: 500px;
     margin: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     border-radius: 25px;
     background-color: rgb(29, 29, 35);
     display: flex;
     flex-direction: row;
     gap: 25px;
     padding: 25px;
-    overflow-x:hidden;
+    overflow-x: hidden;
     overflow-y: hidden;
     align-items: stretch;
     scroll-snap-type: x mandatory;
@@ -303,9 +312,10 @@ li a {
 
 .projectcard {
     /* border: solid 2px rgb(201, 9, 9); */
-    min-height: 450px;
-    min-width: 350px;
+    min-height: 430px;
+    max-width: 350px;
     margin: 30px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -318,7 +328,7 @@ li a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     /* scroll-snap-align: start; */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 .projectcard:hover {
@@ -363,6 +373,18 @@ li a {
     &:hover {
         background-color: rgb(96, 46, 143);
     }
+}
+
+.card-text {
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    padding: 10px;
+    font-family: monospace;
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.5;
 }
 
 .card-content {
@@ -490,6 +512,7 @@ body:has(.about-overlay:target) {
     justify-content: center;
     gap: 10px;
     margin: auto;
+    padding: 0 20px;
     /* border: solid 2px white; */
     height: 6.5em;
     text-align: center;
@@ -506,65 +529,95 @@ body:has(.about-overlay:target) {
     flex: 1 1 auto;
 }
 
+/* Footer Styles */
+footer {
+    width: 100%;
+    background-color: #000;
+    color: grey;
+    padding: 1rem 0;
+    font-family: 'Arial', sans-serif;
+}
+
 .footer {
-    display: flex;
-    justify-content: space-between;
-    height: 200px;
-    padding: 20px;
-    width: 100vw;
-    box-sizing: border-box;
-    /* border: solid 2px white; */
-    background-color: black;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
 }
 
 .parent {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
 }
 
+.fdiv1,
+.div2 {
+    flex: 1;
+    min-width: 300px;
+}
 
-.div1 {
-    grid-area: 1 / 1 / 3 / 4;
+.fdiv1 {
+    text-align: left;
 }
 
 .div2 {
-    grid-area: 1 / 4 / 3 / 7;
+    text-align: right;
 }
 
 .div3 {
-    grid-area: 3 / 1 / 4 / 7;
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #333;
 }
 
-.navbar,
-.footer {
-    width: 100vw;
-    box-sizing: border-box;
+h4 {
+    color: grey;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
 }
 
-.footer .parent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
+a {
+    transition: color 0.3s ease;
 }
 
-.skdisplay,
-.exdisplay,
-.footer {
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    word-break: break-word;
-    padding: 15px;
-    box-sizing: border-box;
-    max-width: 100%;
+a:hover {
+    color: #fff;
 }
 
-pre {
-    white-space: pre-wrap;
-    word-break: break-word;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+    .fdiv1,
+    .div2 {
+        flex: 100%;
+        text-align: center;
+    }
+
+    .div2 {
+        margin-top: 1.5rem;
+    }
+
+    .div3 {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 0 15px;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+    }
+
+    p {
+        font-size: 1rem !important;
+    }
 }
 
 .skillIcons img,
@@ -574,90 +627,199 @@ pre {
     height: auto;
 }
 
-
-@media screen and (max-width: 930px) {
-    .hamburger {
-        display: block;
-    }
-
-    .links {
-        display: none;
-        flex-direction: column;
-        background-color: rgb(76, 52, 97);
-        position: absolute;
-        top: 60px;
-        right: 15px;
-        width: 200px;
-        border-radius: 10px;
-        z-index: 1000;
-    }
-
-    .links.active {
-        display: flex;
-    }
-
-    .links li {
-        display: block;
-        text-align: center;
-        padding: 10px;
-    }
-}
-
+/* Media Queries for Responsive Design */
 @media screen and (max-width: 1440px) {
     .first {
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 20px;
-        gap: 20px;
-    }
-
-    .profile-pic-wrapper {
-        order: -1;
+        flex-direction: column;
+        padding-right: 0;
+        height: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 
     .intro {
         text-indent: 0;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .profile-pic-wrapper {
+        order: -1;
+        /* Moves the profile pic above the intro */
+        margin-bottom: 30px;
+    }
+
+    .projectcard {
+        overflow: auto;
+
+    }
+
+    ::-webkit-scrollbar {
+        width: 8px;
+        /* Decreases vertical scrollbar width */
+        height: 8px;
+        /* Decreases horizontal scrollbar height */
+    }
+
+    ::-webkit-scrollbar-track {
+        background: rgb(40, 40, 57);
+        /* Matches your body background */
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: rgb(76, 52, 97);
+        /* Matches your navbar color */
+        border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgb(108, 0, 176);
+        /* Hover color matches your button hover */
+    }
+}
+
+@media screen and (max-width: 940px) {
+
+    /* Hamburger menu styles */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        background-color: rgb(76, 52, 97);
         width: 100%;
-        max-width: 700px;
+        height: calc(100vh - 70px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: left 0.3s ease;
+        z-index: 100;
+    }
+
+    .links.active {
+        left: 0;
+    }
+
+    .links li {
+        display: block;
+        margin: 20px 0;
+    }
+
+    .links button {
+        font-size: 1.5rem;
+    }
+
+    /* Adjust skill icons layout */
+    .skillIcons {
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    /* Project cards layout */
+    .prdisplay {
+        flex-direction: column;
+        height: auto;
+        overflow-y: auto;
+        padding: 15px;
+    }
+
+    .projectcard {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    /* About overlay adjustments */
+    .about-content {
+        min-width: 90%;
+        padding: 1rem;
+    }
+
+    .about-content pre {
+        font-size: 1rem;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+
+    /* Footer adjustments */
+    .footer {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .parent {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .fdiv1,
+    .div2,
+    .div3 {
+        margin-bottom: 20px;
+    }
+
+    .skdisplay {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #hello {
+        font-size: 30px;
+    }
+
+    #self,
+    #name {
+        font-size: 40px;
+    }
+
+    #prof {
+        font-size: 24px;
     }
 
     .pp {
         width: 250px;
         height: 250px;
-        margin-top: 10px;
+    }
+
+    .skillIcons img {
+        width: 50px;
+        margin: 10px;
+    }
+
+    .projectcard img {
+        width: 100%;
     }
 }
 
-@media screen and (max-width: 600px) {
-  .skdisplay {
-    height: auto;
-    padding: 10px;
-  }
+@media screen and (max-width: 768px) {
+    body {
+        position: relative;
+        /* Helps contain overflow */
+    }
 
-  .skillIcons img {
-    width: clamp(40px, 12vw, 70px);
-    height: auto;
-  }
+    /* Ensure all sections have proper padding */
+    .first,
+    .skdisplay,
+    .prdisplay,
+    .exdisplay {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 
-  .prdisplay {
-    flex-wrap: wrap;
-    height: auto;
-    overflow: hidden;
-    padding: 10px;
-  }
+    /* Fix for project cards */
+    .projectcard {
+        width: calc(100% - 30px);
+        /* Account for padding */
+        margin: 15px;
+    }
 
-  .projectcard {
-    width: 90%;
-    margin: 10px auto;
-  }
-
-  .footer .parent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
+    /* Fix for images in project cards */
+    .projectcard img {
+        max-width: 100%;
+        height: auto;
+    }
 }

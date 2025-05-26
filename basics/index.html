@@ -7,14 +7,24 @@
     <title>Aditya Mallick | Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
-<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="style2.css">
 
 <script>
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
+    document.addEventListener('DOMContentLoaded', function () {
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
 
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('#nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
     });
 </script>
 
@@ -76,7 +86,7 @@ and industry professionals. Let’s build something amazing together!
             <span id="self">
                 I am <span id="name">Aditya Mallick</span>
             </span>
-            <p id="prof">DJANGO DEVELOPER</p>
+            <p id="prof">PYTHON DEVELOPER</p>
 
             <br>
             <div class="icons">
@@ -100,7 +110,7 @@ and industry professionals. Let’s build something amazing together!
 
     </section>
 
-    <hr style="max-width: 90vw;">
+    <!-- <hr style="max-width: 90vw;"> -->
 
     <section id="two">
         <div class="skills">
@@ -154,22 +164,11 @@ and industry professionals. Let’s build something amazing together!
             <div class="projectcard">
                 <img src="../pro_images/Screenshot 2025-05-22 223011.png" alt="project image">
                 <h3>SELF-PORTFOLIO</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum inventore voluptas quod dolores in
-                    ullam voluptate consequatur nisi modi quae aliquid cumque libero, possimus dolore odit nam commodi
-                    eos nihil. Dolores vel accusantium facere aliquam quod possimus, quidem ipsa error sint corporis
-                    totam dolorem consequatur nobis, reiciendis accusamus tempore eum natus impedit iure? Asperiores,
-                    nulla. Commodi quas reprehenderit sit lipsa.</p>
+                <p>A clean, responsive portfolio website built with HTML and CSS. Showcases my skills, projects, and
+                    experience with a modern dark theme and smooth animations. Fully hand-coded to demonstrate my
+                    front-end development abilities.</p>
             </div>
 
-            <div class="projectcard">
-                <img src="../pro_images/Screenshot 2025-05-22 223011.png" alt="project image">
-                <h3>SELF-PORTFOLIO</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum inventore voluptas quod dolores in
-                    ullam voluptate consequatur nisi modi quae aliquid cumque libero, possimus dolore odit nam commodi
-                    eos nihil. Dolores vel accusantium facere aliquam quod possimus, quidem ipsa error sint corporis
-                    totam dolorem consequatur nobis, reiciendis accusamus tempore eum natus impedit iure? Asperiores,
-                    nulla. Commodi quas reprehenderit sit lipsa.</p>
-            </div>
 
 
 
@@ -207,36 +206,40 @@ and industry professionals. Let’s build something amazing together!
 <footer>
     <div class="footer" style="color: grey;">
         <div class="parent">
+
             <div class="fdiv1">
                 <h4 style="text-decoration: underline;">EDUCATION</h4>
-                <pre style="font-size: 1.2em;">
-Pursuing Computer Science And Engineering (Artificial Intelligence) in 
-<a href="https://www.gita.edu.in/" target="_blank" style="text-decoration:none; color:grey">GITA Autonomous College Janla, 
-Badaraghunathpur, Bhubaneswar, Odisha 752054</a>
-             </div>
-
-        <div class="div2"> 
-            <h4 style="text-decoration: underline;">CONTACT</h4>
-            <pre style="font-size: 1.2em;" >
-<a href="mailto:aditya.mallick.1512@gmail.com" style="text-decoration:none; color:grey;">@email:-aditya.mallick.1512@gmail.com</a>
-Phone Number:- 9937919954
-        </pre>
+                <p style="font-size: 1.2em;">
+                    Pursuing Computer Science And Engineering (Artificial Intelligence) in
+                    <br />
+                    <a href="https://www.gita.edu.in/" target="_blank" style="text-decoration:none; color:grey;">
+                        GITA Autonomous College Janla,<br />
+                        Badaraghunathpur, Bhubaneswar, Odisha 752054
+                    </a>
+                </p>
             </div>
 
-            <div class="div3">
-                </pre>
-                <div style="
-        padding:0%;
-        margin:0%;
-        text-align:center
-        ">
-                    <pre>&copy; 2023 Aditya Mallick. All Rights Reserved.</pre>
-                </div>
+            <div class="div2">
+                <h4 style="text-decoration: underline;">CONTACT</h4>
+                <p style="font-size: 1.2em;">
+                    <a href="mailto:aditya.mallick.1512@gmail.com" style="text-decoration:none; color:grey;">
+                        @email:- aditya.mallick.1512@gmail.com
+                    </a>
+                    <br />
+                    Phone Number:- 9937919954
+                </p>
             </div>
+
+            <div class="div3" style="text-align:center;">
+                <p style="margin: 0; font-size: 1em; color: grey;">
+                    &copy; 2025 Aditya Mallick. All Rights Reserved.
+                </p>
+            </div>
+
         </div>
     </div>
-    </div>
 </footer>
+
 
 
 </html>

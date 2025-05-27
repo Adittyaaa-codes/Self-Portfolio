@@ -347,11 +347,13 @@ li a {
 
 
 .exdisplay {
-    height: 650px;
+    height: auto;
     margin: 10px;
     /* border: 2px solid white; */
     border-radius: 25px;
     background-color: rgb(29, 29, 35);
+    padding-top: 30px;
+    padding-bottom: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -764,6 +766,10 @@ a:hover {
     .skdisplay {
         height: auto;
     }
+
+    .exdisplay{
+        height: auto;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -792,6 +798,12 @@ a:hover {
 
     .projectcard img {
         width: 100%;
+    }
+
+    .about-content {
+        width: auto;
+        height: auto;
+        padding: 2rem;
     }
 }
 

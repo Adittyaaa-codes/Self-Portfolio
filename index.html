@@ -14,6 +14,8 @@
     document.addEventListener('DOMContentLoaded', function () {
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('nav-links');
+        const navbar = document.getElementsByClassName('navbar')[0];
+
 
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
@@ -38,11 +40,12 @@
             </div>
             <button class="hamburger" id="hamburger">&#9776;</button>
             <ul class="links" id="nav-links">
-                <li><button><a href="#one">Home</a></button></li>
-                <li><button><a href="#about" class="about-btn">About</a></button></li>
-                <li><button><a href="#two">Skills</a></button></li>
-                <li><button><a href="#three">Projects</a></button></li>
-                <li><button><a href="#four">Experience</a></button></li>
+                <li><a href="#one"><button>Home</button></a></li>
+                <li><a href="#about"><button class="about-btn">About</button></a></li>
+                <li><a href="#two"><button>Skills</button></a></li>
+                <li><a href="#projects"><button>Projects</button></a></li>
+                <li><a href="#four"><button>Experience</button></a></li>
+
             </ul>
         </div>
     </nav>
@@ -51,8 +54,8 @@
     <div id="about" class="about-overlay">
         <a href="#" class="close-btn">×</a>
         <div class="about-content">
-            <!-- <h2 style="font-size:xx-large; text-decoration:underline;">About Me</h2> -->
-            <pre style="font-size: x-large;">👋 Hi, I'm Aditya Mallick
+            <!-- <h2 style="font-size:xx-large; text-decoration:underline;">About</h2> -->
+            <pre style="font-size:large;">👋 Hi, I'm Aditya Mallick
 🎓 A second-year Computer Science Engineering student and a passionate Django Developer with a strong
 interest in AI and Full-Stack Development. 
 
@@ -155,24 +158,69 @@ and industry professionals. Let’s build something amazing together!
     </section>
 
 
-    <section id="three">
+    <section id="projects">
         <div class="project">
-            <H2>PROJECTS</H2>
+            <h2>PROJECTS</h2>
         </div>
 
-        <div class="prdisplay" style="padding-left: 45px;">
+        <div class="prdisplay">
             <div class="projectcard">
-                <img src="../pro_images/Screenshot 2025-05-22 223011.png" alt="project image">
-                <h3>SELF-PORTFOLIO</h3>
-                <p>A clean, responsive portfolio website built with HTML and CSS. Showcases my skills, projects, and
-                    experience with a modern dark theme and smooth animations. Fully hand-coded to demonstrate my
-                    front-end development abilities.</p>
+                <div class="card-image-container">
+                    <img src="../pro_images/Screenshot 2025-05-22 223011.png" alt="project image" class="card-image">
+                    <div class="card-overlay">
+                        <button class="view-demo-btn">Visit ↗️</button>
+                        <button class="view-code-btn">View Code</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>SELF-PORTFOLIO</h3>
+                    <p class="card-text">A clean, responsive portfolio website built with HTML and CSS. Showcases my
+                        skills, projects, and experience with a modern dark theme and smooth animations. Fully
+                        hand-coded to demonstrate my front-end development abilities.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projectcard">
+                <div class="card-image-container">
+                    <img src="../pro_images/Screenshot 2025-05-22 223011.png" alt="project image" class="card-image">
+                    <div class="card-overlay">
+                        <button class="view-demo-btn">Visit ↗️</button>
+                        <button class="view-code-btn">View Code</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>SELF-PORTFOLIO</h3>
+                    <p class="card-text">A clean, responsive portfolio website built with HTML and CSS. Showcases my
+                        skills, projects, and experience with a modern dark theme and smooth animations. Fully
+                        hand-coded to demonstrate my front-end development abilities.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                </div>
             </div>
 
 
 
 
+
+
+            <!-- <div class="project-nav">
+        <button class="nav-btn prev-btn" aria-label="Previous projects">&lt;</button>
+        <div class="project-dots"></div>
+        <button class="nav-btn next-btn" aria-label="Next projects">&gt;</button>
         </div>
+         -->
+
+
+        </div>
+
 
     </section>
 
@@ -183,13 +231,13 @@ and industry professionals. Let’s build something amazing together!
         </div>
 
         <div class="exdisplay">
-            <div class="card-content">
-                <img src="../pro_images/search--v4.png" alt="Logo" class="card-logo">
-                <pre class="card-text">
-    No formal experience yet, 
-    I'm actively looking for opportunities where I can contribute, gain real-world experience,
-    and continue developing my skills with passion and purpose.
-                </pre>
+            <div class="ex-content">
+                <!-- <img src="../pro_images/search--v4.png" alt="Logo" class="card-logo"> -->
+                <p class="ex-text">
+                    No formal experience yet,
+                    I'm actively looking for opportunities where I can contribute, gain real-world experience,
+                    and continue developing my skills with passion and purpose.
+                </p>
                 <button>
                     <a href="">Download CV</a>
                 </button>

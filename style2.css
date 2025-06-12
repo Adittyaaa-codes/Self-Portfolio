@@ -49,10 +49,7 @@ body {
 }
 
 .navbar {
-    position: sticky;
-    background-color: rgba(76, 52, 97, 0.1);
-    backdrop-filter: blur(10px);          
-    -webkit-backdrop-filter: blur(10px);
+    background-color: rgb(76, 52, 97);
     padding-left: 15px;
     padding-right: 15px;
     overflow: hidden;
@@ -88,16 +85,14 @@ body {
     font-size: x-large;
     padding: 7px;
     border-radius: 7px;
+    color: aliceblue;
 
     &:hover {
         background-color: rgb(108, 0, 176);
-        
     }
 
     &:active {
         background-color: rgb(94, 0, 153);
-        border: 3px solid white;
-        box-sizing: border-box;
     }
 }
 
@@ -607,8 +602,9 @@ body:has(.about-overlay:target) {
 
 .close-btn {
     position: absolute;
+    z-index: 1002;
     top: 20px;
-    right: 20px;
+    right: 30px;
     font-size: 1.5rem;
     color: white;
     text-decoration: none;
@@ -621,6 +617,10 @@ body:has(.about-overlay:target) {
     border-radius: 50%;
 }
 
+.close-btn::before {
+  content: "×";
+  font-size: 24px;
+}
 .skillIcons img {
     width: clamp(40px, 10vw, 80px);
     height: auto;
@@ -806,7 +806,43 @@ a:hover {
     .hamburger {
         display: block;
         cursor: pointer;
+        z-index: 1001; /* Above the menu */
+        position: relative; /* Ensure it stays in navbar */
     }
+
+    .close-btn {
+    position: absolute;
+    z-index: 1002;
+    left: 30px;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.2);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    }
+
+    .close-btn::before {
+    content: "<";
+    font-size: 50px;
+    }
+
+    .about-content {
+    color: aliceblue;
+    background: transparent;
+    padding: 1rem;
+    border-radius: 10px;
+    min-width: 600px;
+    border: none;
+    width: 95%;
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
 
     .links {
         position:absolute;

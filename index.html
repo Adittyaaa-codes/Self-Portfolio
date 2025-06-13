@@ -16,20 +16,20 @@
         const navLinks = document.getElementById('nav-links');
         const navbar = document.getElementsByClassName('navbar')[0];
 
-
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
         });
 
         // Close menu when a link is clicked
         document.querySelectorAll('#nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
+                document.body.classList.remove('no-scroll'); 
             });
         });
     });
 </script>
-
 
 <body>
     

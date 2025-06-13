@@ -252,6 +252,11 @@ li a {
     box-sizing: border-box;
 }
 
+.ex-content{
+    text-align:center;
+    color:aliceblue;
+}
+
 .ex h2 {
     margin: 0;
     margin-top: 50px;

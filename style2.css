@@ -1,16 +1,27 @@
 * {
     box-sizing: border-box;
     max-width: 100%;
-    font-family:Verdana, Geneva, Tahoma, sans-serif
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "width" 100;
+}
+
+hr{
+    border: none;
+    height: 2px;
+    background-color: #414040;
+    color: #272525;
 }
 
 html::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 html {
-  -ms-overflow-style: none;
-  scrollbar-width: none;  
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 html {
@@ -27,6 +38,17 @@ body {
     transition: filter 0.4s ease;
     min-height: 100vh;
 }
+
+body.no-scroll {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
 
 .bi::before,
 [class*=" bi-"]::before,
@@ -227,7 +249,14 @@ li a {
     margin-top: 50px;
     text-align: center;
     color: azure;
-    font-size: xx-large;
+    font-size: 2.5rem;
+}
+
+
+.skillName {
+    font-family: "Huninn", sans-serif;
+    font-weight: 800;
+    font-style: normal;
 }
 
 
@@ -242,7 +271,7 @@ li a {
     margin-top: 50px;
     text-align: center;
     color: azure;
-    font-size: xx-large;
+    font-size: 2.5rem;
 }
 
 
@@ -252,9 +281,9 @@ li a {
     box-sizing: border-box;
 }
 
-.ex-content{
-    text-align:center;
-    color:aliceblue;
+.ex-content {
+    text-align: center;
+    color: aliceblue;
 }
 
 .ex h2 {
@@ -262,12 +291,13 @@ li a {
     margin-top: 50px;
     text-align: center;
     color: azure;
-    font-size: xx-large;
+    font-size: 2.5rem;
 }
 
 .skdisplay {
-    height: 650px;
+    height: 745px;
     margin: 10px;
+    padding-bottom: 10px;
     /* border: 2px solid white; */
     box-sizing: border-box;
     border-radius: 25px;
@@ -282,6 +312,17 @@ li a {
     color: rgb(252, 223, 223);
 }
 
+.skillInside {
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+}
+
+.skillInside h6 {
+    margin: 0%;
+    padding: 0%;
+}
+
 .dot {
     display: inline-block;
     width: 10px;
@@ -289,13 +330,25 @@ li a {
     border-radius: 50%;
 }
 
+.yellow,
+.green {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
 .yellow {
     background-color: #FFD700;
+    /* gold/yellow */
 }
 
 .green {
     background-color: #32CD32;
+    /* lime green */
 }
+
 
 #projects {
     padding: 2rem 0;
@@ -313,18 +366,9 @@ li a {
     transform: translateX(-50%);
 }
 
-.project h2::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, #767de3, #a2a6e2);
-    border-radius: 3px;
-}
 
 .prdisplay {
+    position: relative;
     height: auto;
     margin: 10px;
     border-radius: 25px;
@@ -332,28 +376,30 @@ li a {
     display: flex;
     flex-direction: row;
     gap: 25px;
-    padding: 25px;
+    padding: 25px 25px 25px 40px;
+    /* top, right, bottom, left */
     overflow-x: scroll;
     overflow-y: hidden;
-    align-items: center;
-    justify-content: center;
     scroll-snap-type: x mandatory;
-    scrollbar-width: none; 
-    -ms-overflow-style: none; 
+    scroll-padding-left: 28px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
-/* Hide scrollbar for Chrome/Safari */
+
 .prdisplay::-webkit-scrollbar {
     display: none;
 }
 
 .projectcard {
-    min-height: 430px;
+    flex: 0 0 auto;
     width: 400px;
-    overflow: hidden;
+    min-height: 430px;
+    margin: 10px;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
-    background-color: #a2a6e2b4;
+    background-color: #9298edb4;
     border-radius: 35px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -363,10 +409,49 @@ li a {
     cursor: pointer;
 }
 
+.spacer-card {
+    flex: 0 0 25px;
+    /* width of the desired gap */
+    height: 1px;
+    /* minimal height */
+    background: transparent;
+    pointer-events: none;
+    scroll-snap-align: none;
+    /* prevent snap from stopping on spacer */
+}
+
+
+
+
 .projectcard:hover {
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
+
+.dots-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  width: 100%;
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #767de3;
+}
+
 
 .card-image-container {
     position: relative;
@@ -403,7 +488,8 @@ li a {
     opacity: 1;
 }
 
-.view-demo-btn, .view-code-btn {
+.view-demo-btn,
+.view-code-btn {
     padding: 10px 20px;
     border: none;
     border-radius: 25px;
@@ -422,7 +508,8 @@ li a {
     color: #767de3;
 }
 
-.view-demo-btn:hover, .view-code-btn:hover {
+.view-demo-btn:hover,
+.view-code-btn:hover {
     transform: scale(1.05);
 }
 
@@ -530,8 +617,8 @@ li a {
 
 .exdisplay button {
     font-size: 1.5em;
-    width: 250px;
-    padding: 15px;
+    width: 200px;
+    padding: 10px;
     border-radius: 15px;
     background-color: rgb(145, 71, 214);
     border: none;
@@ -623,17 +710,18 @@ body:has(.about-overlay:target) {
 }
 
 .close-btn::before {
-  content: "×";
-  font-size: 24px;
+    content: "×";
+    font-size: 24px;
 }
+
 .skillIcons img {
     width: clamp(40px, 10vw, 80px);
     height: auto;
     display: flex;
     padding: 3px;
-    border-radius: 15px;
+    border-radius: none;
     margin: 15px;
-    background-color: #393939;
+    background-color: transparent;
     /* background-color: transparent; */
     transition: transform 0.2s;
 
@@ -811,59 +899,65 @@ a:hover {
     .hamburger {
         display: block;
         cursor: pointer;
-        z-index: 1001; /* Above the menu */
-        position: relative; /* Ensure it stays in navbar */
+        z-index: 1001;
+        /* Above the menu */
+        position: relative;
+        /* Ensure it stays in navbar */
     }
 
     .close-btn {
-    position: absolute;
-    z-index: 1002;
-    left: 30px;
-    font-size: 1.5rem;
-    color: white;
-    text-decoration: none;
-    background: rgba(255, 255, 255, 0.2);
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
+        position: absolute;
+        z-index: 1002;
+        left: 30px;
+        font-size: 1.5rem;
+        color: white;
+        text-decoration: none;
+        background: rgba(255, 255, 255, 0.2);
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
     }
 
     .close-btn::before {
-    content: "<";
-    font-size: 50px;
+        content: "<";
+        font-size: 50px;
     }
 
     .about-content {
-    color: aliceblue;
-    background: transparent;
-    padding: 1rem;
-    border-radius: 10px;
-    min-width: 600px;
-    border: none;
-    width: 95%;
-    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
-    transform: scale(0.9);
-    transition: transform 0.3s ease;
-}
+        color: aliceblue;
+        background: transparent;
+        padding: 1rem;
+        border-radius: 10px;
+        min-width: 600px;
+        border: none;
+        width: 95%;
+        /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
+        transform: scale(0.9);
+        transition: transform 0.3s ease;
+    }
 
     .links {
-        position:absolute;
+        position: absolute;
         padding: 0;
         top: 30px;
         left: -100%;
-        background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
-        backdrop-filter: blur(30px); /* Blur effect behind the element */
-        -webkit-backdrop-filter: blur(10px); /* For Safari */
+        background: rgba(255, 255, 255, 0.2);
+        /* Semi-transparent white */
+        backdrop-filter: blur(30px);
+        /* Blur effect behind the element */
+        -webkit-backdrop-filter: blur(10px);
+        /* For Safari */
         width: 100%;
-        height: 100%;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         transition: left 0.3s ease;
         z-index: 100;
+        height: 100vh;
+        overflow-y: auto;
     }
 
     .links.active {
@@ -876,7 +970,7 @@ a:hover {
         /* left: -20%; */
     }
 
-    .links button{
+    .links button {
         font-size: 1.5rem;
         padding: 10px;
         padding-left: 2px;
@@ -885,7 +979,7 @@ a:hover {
         padding-bottom: 20px;
     }
 
-    .links a{
+    .links a {
         padding-left: 5px;
         padding-right: 80%;
     }
@@ -896,12 +990,53 @@ a:hover {
         flex-wrap: wrap;
     }
 
+
     /* Project cards layout */
     .prdisplay {
         flex-direction: column;
         height: auto;
         overflow-y: auto;
         padding: 15px;
+    }
+
+    .prdisplay {
+        height: auto;
+        margin: 10px;
+        /* padding-left: 10px; */
+        border-radius: 25px;
+        background-color: rgb(29, 29, 35);
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        padding: 25px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        align-items: center;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .prdisplay::-webkit-scrollbar {
+        display: none;
+    }
+
+    .projectcard {
+        flex: 0 0 auto;
+        width: 400px;
+        min-height: 430px;
+        /* margin-left: 10px; */
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        background-color: #a2a6e2b4;
+        border-radius: 35px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        scroll-snap-align: start;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        cursor: pointer;
     }
 
     .projectcard {
@@ -912,13 +1047,11 @@ a:hover {
     /* About overlay adjustments */
     .about-content {
         min-width: 90%;
-        padding: 1rem;
+        padding: 10px;
     }
 
-    .about-content pre {
-        font-size: 1rem;
-        white-space: pre-wrap;
-        word-wrap: break-word;
+    .about-content p {
+        font-size: 100px;
     }
 
     /* Footer adjustments */
@@ -942,7 +1075,11 @@ a:hover {
         height: auto;
     }
 
-    .exdisplay{
+    .skdisplay h2{
+        font-size: 18px;;
+    }
+
+    .exdisplay {
         height: auto;
     }
 }
@@ -977,36 +1114,36 @@ a:hover {
     }
 
     .about-content {
-    color: aliceblue;
-    background: transparent;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow:hidden;
-    height: 90%;
-    border: none;
-    width: 90%;
-    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
-    transform: scale(0.9);
-    transition: transform 0.3s ease;
+        color: aliceblue;
+        background: transparent;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        height: 90%;
+        border: none;
+        width: 90%;
+        /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
+        transform: scale(0.9);
+        transition: transform 0.3s ease;
     }
 
     .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 3rem;
-    color: white;
-    text-decoration: none;
-    background-color: rgba(147, 138, 138, 0.644);
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-}
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 3rem;
+        color: white;
+        text-decoration: none;
+        background-color: rgba(147, 138, 138, 0.644);
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
 }
 
 @media screen and (max-width: 768px) {

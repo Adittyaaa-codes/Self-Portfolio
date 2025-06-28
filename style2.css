@@ -394,7 +394,7 @@ li a {
 .projectcard {
     flex: 0 0 auto;
     width: 400px;
-    min-height: 430px;
+    min-height: 400px;
     margin: 10px;
     overflow-x: hidden;
     display: flex;
@@ -895,14 +895,11 @@ a:hover {
 
 @media screen and (max-width: 940px) {
 
-    /* Hamburger menu styles */
     .hamburger {
         display: block;
         cursor: pointer;
         z-index: 1001;
-        /* Above the menu */
         position: relative;
-        /* Ensure it stays in navbar */
     }
 
     .close-btn {
@@ -1024,9 +1021,9 @@ a:hover {
     .projectcard {
         flex: 0 0 auto;
         width: 400px;
-        min-height: 430px;
+        max-height: 450px;
         /* margin-left: 10px; */
-        overflow-x: hidden;
+        overflow: hidden;
         display: flex;
         flex-direction: column;
         background-color: #a2a6e2b4;

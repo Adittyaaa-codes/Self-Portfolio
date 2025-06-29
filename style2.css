@@ -246,8 +246,9 @@ li a {
 
 .skills h2 {
     margin: 0;
-    margin-top: 50px;
+    margin-top: 10px;
     text-align: center;
+    text-decoration: underline;
     color: azure;
     font-size: 2.5rem;
 }
@@ -295,9 +296,9 @@ li a {
 }
 
 .skdisplay {
-    height: 745px;
+    height: auto;
     margin: 10px;
-    padding-bottom: 10px;
+    padding: 0px 10px 45px 10px;
     /* border: 2px solid white; */
     box-sizing: border-box;
     border-radius: 25px;

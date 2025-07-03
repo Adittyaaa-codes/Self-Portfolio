@@ -18,272 +18,281 @@
 
 
 <body>
+
     <script src="script.js">
     </script>
-    
 
-    <nav class="navbar">
-        <div class="navdiv">
-            <div class="logo">
-                <!-- <span><img src="images\Picsart_25-06-11_20-11-31-371 (1).png" alt="Aditya" style="width:80px"></span> -->
-                <span style="font-family:cursive">Aditya</span>
+    <video autoplay loop muted class="back-video" id="back-video">
+        <source src="bg star recording.mp4">
+    </video>
+
+    <div class="main-content">
+        <nav class="navbar" id="navbar">
+            <div class="navdiv">
+                <div class="logo">
+                    <!-- <span><img src="images\Picsart_25-06-11_20-11-31-371 (1).png" alt="Aditya" style="width:80px"></span> -->
+                    <span style="font-family:cursive">Aditya</span>
+                </div>
+                <button class="hamburger" id="hamburger">&#9776;</button>
+                <ul class="links" id="nav-links">
+                    <li><a href="#one"><button>Home</button></a></li>
+                    <li><a href="#about"><button class="about-btn">About</button></a></li>
+                    <li><a href="#projects"><button>Projects</button></a></li>
+                    <li><a href="#two"><button>Skills</button></a></li>
+                    <li><a href="#four"><button>Experience</button></a></li>
+                </ul>
             </div>
-            <button class="hamburger" id="hamburger">&#9776;</button>
-            <ul class="links" id="nav-links">
-                <li><a href="#one"><button>Home</button></a></li>
-                <li><a href="#about"><button class="about-btn">About</button></a></li>
-                <li><a href="#projects"><button>Projects</button></a></li>
-                <li><a href="#two"><button>Skills</button></a></li>
-                <li><a href="#four"><button>Experience</button></a></li>
-            </ul>
-        </div>
-    </nav>
+        </nav>
 
 
-    <div id="about" class="about-overlay">
-        <a href="#" class="close-btn"></a>
-        <div class="about-content">
-            <!-- <h2 style="font-size:xx-large; text-decoration:underline;">About</h2> -->
-            <p style="font-size: 1.5rem; text-align:center"><br>
-                Hi, I'm Aditya Mallick, 👋 <br>
-                <br>
-                A 2nd-year Computer Science Engineering student💻 and passionate Web developer🌐<br>
-                with a strong interest in Full-Stack Development and AI. <br>
-                <br>
-                🚀 I love building real-world solutions, exploring new technologies, and constantly growing as a
-                developer.
-                <br><br>
-                💼 I'm actively seeking internships and projects to learn, contribute, and make a meaningful impact.
-                <br><br>
-                🙏 Thanks for visiting my profile — let’s connect and create something amazing! 🤝
-            </p>
-
-        </div>
-    </div>
-
-    <section class="first" id="one">
-
-        <div class="intro">
-            <p id="hello">Hey there,</p>
-            <span id="self">
-                I am <div class="typewriter" id="name">Aditya Mallick</div>
-            </span>
-            <p id="prof">WEB DEVELOPER</p>
-
-            <br>
-            <div class="icons">
-                <a href="https://github.com/Adittyaaa-codes" target="_blank" style="text-decoration: none;"><i
-                        class="bi bi-github"></i></a>
-                <a href="https://www.linkedin.com/in/aditya-mallick-7836692b6/" target="_blank"><i
-                        class="bi bi-linkedin" style="color: #0077B5"></i></a>
-                <a href="https://x.com/Adittyaaa_Mk" target="_blank"><i class="bi bi-twitter-x"
-                        style="color: white"></i></a>
-                <a href="mailto:aditya.mallick.1512@gmail.com" target="_blank" style="text-decoration: none;"><i
-                        class="bi bi-envelope-at" style="color: tomato"></i></a>
-            </div>
-
-        </div>
-        <div class="profile-pic-wrapper">
-            <a href="images/SelfProfilePic.jpg" target="blank">
-                <img src="images/SelfProfilePic.jpg" alt="profilepic" class="pp">
-            </a>
-        </div>
-        <!-- <a href="AdityaDP.jpg" target="blank"><img src="AdityaDP.jpg" alt="profilepic" class="pp"></a> -->
-
-    </section>
-
-    <hr style="max-width: 90vw;">
-
-    <section id="projects" style="margin-bottom:50px;">
-        <div class="project">
-            <h2>PROJECTS</h2>
-        </div>
-
-        <div class="prdisplay">
-
-        <div class="spacer-card"></div>
-            <div class="projectcard" id="to-do-list">
-                <div class="card-image-container">
-                    <img src="../pro_images/Screenshot 2025-06-27 123357.png" alt="project image" class="card-image">
-                    <div class="card-overlay">
-                        <a href="https://to-do-list-gamma-seven-88.vercel.app/" target="blank"><button
-                                class="view-demo-btn">Visit
-                                ↗️</button></a>
-                        <a href="https://github.com/Adittyaaa-codes/To-Do-List" target="blank"><button
-                                class="view-code-btn">View Code</button></a>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <h3>TO-DO LIST</h3>
-                    <p class="card-text">A simple, elegant task manager that lets users add, complete, and delete tasks.
-                        Built with HTML, CSS, and JavaScript, it features real-time task counters, checkbox-based
-                        completion, and a responsive dark-themed UI for a smooth user experience.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="projectcard">
-                <div class="card-image-container">
-                    <img src="../pro_images/Screenshot 2025-06-13 124801.png" alt="project image" class="card-image">
-                    <div class="card-overlay">
-                        <a href=""><button class="view-demo-btn">Visit ↗️</button></a>
-                        <a href="https://github.com/Adittyaaa-codes/Self-Portfolio" target="blank"><button
-                                class="view-code-btn">View Code</button></a>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <h3>SELF-PORTFOLIO</h3>
-                    <p class="card-text">My first ever website — a personal single page portfolio website built to
-                        showskill my frontend capabilities
-                        and passion for web development. It reflects my journey as a growing developer and serves as a
-                        foundation for many
-                        more projects to come.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="projectcard" style="background-color:transparent; padding-top:11%">
-
-                <div class="card-image-container">
-                </div>
-
-                <div class="card-content">
-                    <p class="card-text" style="font-size: x-large; color:grey">🔧 I’m constantly learning and
-                        building—more awesome projects will be added here soon!</p>
-                </div>
-            </div>
-
-
-
-        </div>
-
-
-    </section>
-
-    <br>
-    <br>
-
-    <section id="two">
-        <div class="skills">
-            <H2>SKILLS</H2>
-        </div>
-
-        <div class="skdisplay">
-            <div class="skills">
-            </div>
-
-
-            <h2 style="text-align:center ; color:antiquewhite;">TECHNICAL LANGUAGES</h2>
-            <hr style="width: 90vw; ">
-            <div class="skillIcons" style="display: flex; justify-content:center">
-                <div class="skillInside">
-                    <img src="../images/Python-logo-notext.svg.png" alt="Python">
-                    <span class="skillName"></span>PYTHON</span>
-                </div>
-                <div class="skillInside">
-                    <img src="../images/HTML5_logo_and_wordmark.svg.png" alt="HTML">
-                    <span class="skillName" style="margin-top: 8px;"></span>HTML</span>
-                </div>
-                <div class="skillInside">
-                    <img src="../images/css-3.svg" alt="CSS">
-                    <span class="skillName">CSS</span>
-                </div>
-                <div class="skillInside">
-                    <img src="../images/javascript (1).png" alt="MySQL">
-                    <span class="skillName" style="margin-top: 8px;">JAVASCRIPT</span>
-                </div>
-                <div class="skillInside">
-                    <img src="../images/java.svg" alt="Java">
-                    <span class="skillName" style="margin-top: 8px;">JAVA</span>
-                </div>
-                <div class="skillInside">
-                    <img src="../images/C_Programming_Language.svg.png" alt="C">
-                    <span class="skillName">C</span>
-                </div>
-                <div class="skillInside">
-                    <img src="../images/mysql.svg" alt="C++">
-                    <span class="skillName" style="margin-top: 8px;"></span>MYSQL</span>
-                </div>
-
-
-            </div>
-
-            <br>
-            <br>
-
-            <h2 style="text-align:center; color:antiquewhite;">FRAMEWORKS/LIBRARIES</h2>
-            <hr style="width: 90vw;">
-            <div class="skillIcons" style="display: flex; justify-content:center">
-                <div class="skillInside">
-                    <img src="../images/django.svg" alt="Python">
-                    <span class="skillName"></span>DJANGO</span>
-                </div>
-                <div class="skillInside">
-                    <img src="../images/numpy-svgrepo-com.svg" alt="NumPy">
-                    <span class="skillName"></span>NUMPY</span>
-                </div>
-
-            </div>
-
-            <br>
-            <br>
-
-            <h2 style="text-align:center; color:antiquewhite;">TOOLS</h2>
-            <hr style="width: 90vw;">
-            <div class="skillIcons otherlogos" style="display: flex; justify-content:center">
-                <div class="skillInside">
-                    <img src="../images/code-stable.png" alt="VsCode" style="background-color: transparent;">
-                    <span class="skillName">VS CODE</span>
-                </div>
-                <div class="skillInside">
-                    <img src="../images/git-icon-logo.svg" alt="GitHub" style="background-color: transparent;">
-                    <span class="skillName">GIT</span>
-                </div>
-                <div class="skillInside">
-                    <img src="../images/PyCharm_Icon.svg.png" alt="PyCharm" style="background-color: transparent;">
-                    <span class="skillName">PYCHARM</span>
-                </div>
-                <div class="skillInside">
-                    <img src="../images/jupylogo.png" alt="Jupyter" style="background-color: transparent;">
-                    <span class="skillName">JUPYTER</span>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-
-
-
-    <section id="four">
-        <div class="ex">
-            <H2>EXPERIENCES</H2>
-        </div>
-
-        <div class="exdisplay">
-            <div class="ex-content">
-                <img src="../pro_images/search--v4.png" alt="Logo" style="width:200px">
-                <p class="ex-text">
-                    No formal experience yet,<br>
-                    I'm actively looking for opportunities
-                    where I can contribute, gain real-world experience,<br>
-                    and continue developing my skills with passion and purpose.
+        <div id="about" class="about-overlay">
+            <a href="#" class="close-btn"></a>
+            <div class="about-content">
+                <!-- <h2 style="font-size:xx-large; text-decoration:underline;">About</h2> -->
+                <p style="font-size: 1.5rem; text-align:center"><br>
+                    Hi, I'm Aditya Mallick, 👋 <br>
+                    <br>
+                    A 2nd-year Computer Science Engineering student💻 and passionate Web developer🌐<br>
+                    with a strong interest in Full-Stack Development and AI. <br>
+                    <br>
+                    🚀 I love building real-world solutions, exploring new technologies, and constantly growing as a
+                    developer.
+                    <br><br>
+                    💼 I'm actively seeking internships and projects to learn, contribute, and make a meaningful impact.
+                    <br><br>
+                    🙏 Thanks for visiting my profile — let’s connect and create something amazing! 🤝
                 </p>
-                <!-- <button>
+
+            </div>
+        </div>
+
+        <section class="first" id="one">
+
+            <div class="intro">
+                <p id="hello">Hey there,</p>
+                <span id="self">
+                    I am <div class="typewriter" id="name">Aditya Mallick</div>
+                </span>
+                <p id="prof">WEB DEVELOPER</p>
+
+                <br>
+                <div class="icons">
+                    <a href="https://github.com/Adittyaaa-codes" target="_blank" style="text-decoration: none;"><i
+                            class="bi bi-github" style="color: white"></i></a>
+                    <a href="https://www.linkedin.com/in/aditya-mallick-7836692b6/" target="_blank"><i
+                            class="bi bi-linkedin" style="color: #0077B5"></i></a>
+                    <a href="https://x.com/Adittyaaa_Mk" target="_blank"><i class="bi bi-twitter-x"
+                            style="color: white"></i></a>
+                    <a href="mailto:aditya.mallick.1512@gmail.com" target="_blank" style="text-decoration: none;"><i
+                            class="bi bi-envelope-at" style="color: tomato"></i></a>
+                </div>
+
+            </div>
+            <div class="profile-pic-wrapper">
+                <a href="images/SelfProfilePic.jpg" target="blank">
+                    <img src="images/SelfProfilePic.jpg" alt="profilepic" class="pp">
+                </a>
+            </div>
+            <!-- <a href="AdityaDP.jpg" target="blank"><img src="AdityaDP.jpg" alt="profilepic" class="pp"></a> -->
+
+        </section>
+
+
+        <section id="projects" style="margin-bottom:50px;">
+            <div class="project">
+                <h2>PROJECTS</h2>
+            </div>
+
+            <div class="prdisplay">
+
+                <div class="spacer-card"></div>
+                <div class="projectcard" id="to-do-list">
+                    <div class="card-image-container">
+                        <img src="../pro_images/Screenshot 2025-07-03 223750.png" alt="project image"
+                            class="card-image" style="height:230px;">
+                        <div class="card-overlay">
+                            <a href="https://to-do-list-gamma-seven-88.vercel.app/" target="blank"><button
+                                    class="view-demo-btn">Visit
+                                    ↗️</button></a>
+                            <a href="https://github.com/Adittyaaa-codes/To-Do-List" target="blank"><button
+                                    class="view-code-btn">View Code</button></a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>TO-DO LIST</h3>
+                        <p class="card-text">A simple, elegant task manager that lets users add, complete, and delete
+                            tasks.
+                            Built with HTML, CSS, and JavaScript, it features real-time task counters, checkbox-based
+                            completion, and a responsive dark-themed UI for a smooth user experience.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projectcard">
+                    <div class="card-image-container">
+                        <img src="../pro_images/Screenshot 2025-07-03 224239.png" alt="project image"
+                            class="card-image">
+                        <div class="card-overlay">
+                            <a href=""><button class="view-demo-btn">Visit ↗️</button></a>
+                            <a href="https://github.com/Adittyaaa-codes/Self-Portfolio" target="blank"><button
+                                    class="view-code-btn">View Code</button></a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>SELF-PORTFOLIO</h3>
+                        <p class="card-text">My first ever website — a personal single page portfolio website built to
+                            showskill my frontend capabilities
+                            and passion for web development. It reflects my journey as a growing developer and serves as
+                            a
+                            foundation for many
+                            more projects to come.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projectcard" style="background-color:transparent; padding-top:11%">
+
+                    <div class="card-image-container">
+                    </div>
+
+                    <div class="card-content">
+                        <p class="card-text" style="font-size: x-large; color:grey">🔧 I’m constantly learning and
+                            building—more awesome projects will be added here soon!</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+        </section>
+
+        <br>
+        <br>
+
+        <section id="two">
+            <div class="skills">
+                <H2>SKILLS</H2>
+            </div>
+
+            <div class="skdisplay">
+                <div class="skills">
+                </div>
+
+
+                <h2 style="text-align:center ; color:antiquewhite;">TECHNICAL LANGUAGES</h2>
+                <hr style="width: 90vw; ">
+                <div class="skillIcons" style="display: flex; justify-content:center">
+                    <div class="skillInside">
+                        <img src="../images/Python-logo-notext.svg.png" alt="Python" style="width:60px;">
+                        <span class="skillName"></span>PYTHON</span>
+                    </div>
+                    <div class="skillInside">
+                        <img src="../images/HTML5_logo_and_wordmark.svg.png" alt="HTML" style="width:60px;">
+                        <span class="skillName" style="margin-top: 8px;"></span>HTML</span>
+                    </div>
+                    <div class="skillInside">
+                        <img src="../images/css-3.svg" alt="CSS" style="width:60px;">
+                        <span class="skillName">CSS</span>
+                    </div>
+                    <div class="skillInside">
+                        <img src="../images/javascript (1).png" alt="MySQL" style="width:60px;">
+                        <span class="skillName" style="margin-top: 8px;">JAVASCRIPT</span>
+                    </div>
+                    <div class="skillInside">
+                        <img src="../images/java.svg" alt="Java" style="width:60px;">
+                        <span class="skillName" style="margin-top: 8px;">JAVA</span>
+                    </div>
+                    <div class="skillInside">
+                        <img src="../images/C_Programming_Language.svg.png" alt="C" style="width:60px;">
+                        <span class="skillName">C</span>
+                    </div>
+                    <div class="skillInside">
+                        <img src="../images/mysql.svg" alt="SQL" style="width:60px;">
+                        <span class="skillName" style="margin-top: 8px; "></span>MYSQL</span>
+                    </div>
+
+
+                </div>
+
+                <br>
+                <br>
+
+                <h2 style="text-align:center; color:antiquewhite;">FRAMEWORKS/LIBRARIES</h2>
+                <hr style="width: 90vw;">
+                <div class="skillIcons" style="display: flex; justify-content:center">
+                    <div class="skillInside">
+                        <img src="../images/django.svg" alt="Python" style="width:70px;">
+                        <span class="skillName"></span>DJANGO</span>
+                    </div>
+                    <div class="skillInside">
+                        <img src="../images/numpy-svgrepo-com.svg" alt="NumPy" style="width:70px;">
+                        <span class="skillName"></span>NUMPY</span>
+                    </div>
+
+                </div>
+
+                <br>
+                <br>
+
+                <h2 style="text-align:center; color:antiquewhite;">TOOLS</h2>
+                <hr style="width: 90vw;">
+                <div class="skillIcons otherlogos" style="display: flex; justify-content:center">
+                    <div class="skillInside">
+                        <img src="../images/code-stable.png" alt="VsCode" style="background-color: transparent; width:50px;">
+                        <span class="skillName">VS CODE</span>
+                    </div>
+                    <div class="skillInside">
+                        <img src="../images/git-icon-logo.svg" alt="GitHub" style="background-color: transparent; width:50px;">
+                        <span class="skillName">GIT</span>
+                    </div>
+                    <div class="skillInside">
+                        <img src="../images/PyCharm_Icon.svg.png" alt="PyCharm" style="background-color: transparent; width:50px;">
+                        <span class="skillName">PYCHARM</span>
+                    </div>
+                    <div class="skillInside">
+                        <img src="../images/jupylogo.png" alt="Jupyter" style="background-color: transparent; width:45px;">
+                        <span class="skillName">JUPYTER</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <section id="four">
+            <div class="ex">
+                <H2>EXPERIENCES</H2>
+            </div>
+
+            <div class="exdisplay">
+                <div class="ex-content">
+                    <img src="../pro_images/search--v4.png" alt="Logo" style="width:200px; color:grey">
+                    <p class="ex-text">
+                        No formal experience yet,<br>
+                        I'm actively looking for opportunities
+                        where I can contribute, gain real-world experience,<br>
+                        and continue developing my skills with passion and purpose.
+                    </p>
+                    <!-- <button>
                     <a href="">Download CV</a>
                 </button> -->
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 </body>
 
 <br>
